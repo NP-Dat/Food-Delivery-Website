@@ -6,7 +6,7 @@ body, html {
 
     font-family: Noto Sans;
 
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .navbar {
     display: flex;
@@ -30,7 +30,8 @@ body, html {
 }
 .navbar .nav-links {
     display: flex;
-    gap: 20px;
+    font-size: 20px;
+    gap: 60px;
 }
 p.welcome {
     
