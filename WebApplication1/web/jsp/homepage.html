@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Food Delivery Website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        header {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 10px 20px; 
+            background-color: #f4f4f4; 
+            border-bottom: 1px solid #ccc; 
+        }
+        
+        .list {
+            display: flex; 
+            gap: 20px;
+        }
+        
+        .account {
+            display: flex; 
+            gap: 15px; 
+        }
+        
+        /* Optional: Additional Styling */
+        header p {
+            margin: 0; /* Removes default margins from <p> elements */
+            font-size: 16px; /* Sets the font size */
+            cursor: pointer; /* Adds a pointer cursor on hover */
+        }
+        
+        header p:hover {
+            color: #007BFF; /* Changes color on hover */
+        }
+        
+    </style>
+    <body>
+        <header>
+            <div class="list">
+                <p>Home</p>
+                <p>About Us</p>
+                <p>Restaurant</p>
+                <p class="contacts">Contacts</p>
+            </div>
+
+            <div class="account">
+                <p>Cart</p>
+                <p>Account</p>
+            </div>
+        </header>
+        <main>
+
+        </main>
+        <footer>
+
+        </footer>
+        <div>
+            <button onclick="window.location.href='userLogin.jsp';">User</button>
+            <br>
+            <button onclick="window.location.href='restaurantLogin.jsp';">Restaurant</button>
+        </div>
+    </body>
+</html>
