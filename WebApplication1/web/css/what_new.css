@@ -1,0 +1,30 @@
+.what-new-page {
+    background-color: aliceblue;
+    border-style: solid;
+}
+.what-new-page p {
+    font-weight: bolder;
+    
+}
+.order-your-product {
+    font-size: 25px ;
+    color: black;
+}
+
+.easier-faster {
+    font-size: 25px ;
+    color: #FFC554;
+}
+.go-to-menu {
+    background-color: #FFC554;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-top: 10px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
