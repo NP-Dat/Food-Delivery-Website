@@ -11,21 +11,22 @@
     <body>
         <div class="container">
             <div class="form-section">
+                <h1>Welcome Back!</h1>
                 <form action="userLogin.jsp" method="post">
-                    <div class="labelContainer">
-                        <label for="username">Username:</label>
-                        <br>
-                        <label for="password">Password:</label>
-                    </div>
-                    
-                    <div class="inputContainer">
-                        <input type="text" id="username" name="username">
-                        <br>
-                        <input type="password" id="password" name="password">
-                    </div>
+                    <input type="text" placeholder="Username" required> <br><br>
+                    <input type="text" placeholder="Password" required> <br><br>
+                    <button type="submit">Login</button>
                 </form>
+                <div class="social-login">
+
+                </div>
+            </div>
+            <div class="image-section">
+                <img class="login" style="width: 50px; border-radius: 50%" src="Utilities/img/google-icon.png" alt="Google">
+                <img class="login" style="width: 50px; border-radius: 50%" src="Utilities/img/facebook-icon.png" alt="Google">
+                <img class="login" style="width: 50px; border-radius: 50%" src="Utilities/img/apple-icon.png" alt="Google">
             </div>
         </div>
-        
+            
     </body>
 </html>
