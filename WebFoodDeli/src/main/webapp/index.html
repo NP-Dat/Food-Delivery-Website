@@ -1,44 +1,141 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Food Delivery Website</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:200">
-        <link rel="stylesheet" href="styles/welcome.css">
+        <title>Homepage</title>
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="Utilities/img/Logo.png" width="70px">
-                </a>
+        <header>
+            <div class="advertisements">
+                <div class="ad">Get 5% Off your orders, <span class="ad-span">Promo: ORDER5</span></div>
+                <div class="ad">Di An, Binh Duong, <span class="ad-span">Change Location</span></div>
             </div>
-            <div class="nav">
-                <a href="index.html">Homepage</a>
-                <a href="nearby.html">Nearby</a>
-                <a href="discount.html">Discount</a>
-                <a href="bestchoices.html">Best choices</a>
-                <a href="what_new.html">What's new</a>
-                <a href="aboutUs.html">About us</a>
+            <div class="header">
+                <a href="index.html"><img class="logo" src="images/logo.png" alt=""></a>
+                <hr>
+                    <div class="nav-bar">
+                    <!-- <div class="nav">Home</div> -->
+                    <!-- <div class="nav">Browse Menu</div>
+                    <div class="nav">Special Offers</div>
+                    <div class="nav">Restaurants</div>
+                    <div class="nav">Track Order</div> -->
+                    <div class="login-signup">
+                        <button class="login-signup-button" onclick="location.href='login.html'">Login/Signup</button>
+                      </div>
+                      
+                </div>
             </div>
-        </div>
-        
-        <div class="header">
-            <p class="welcome">PD Food Deli</p>
-            <p class="description">Let's get some food</p>
-            <p class="call-login">Login to order or Sign up if you don't have an account</p>
-        </div>
+        </header>
+        <main>
+            <div class="background-container">
+                <!-- This is to display the background image  -->
+            </div>
 
-        <div class="container">
-            <button class="button" onclick="window.location.href='userLogin.jsp';">User</button>
-            <button class="button" onclick="window.location.href='restaurantLogin.jsp';">Restaurant</button>
-        </div>
-    
-        <!-- <img class="noodleImg" src="Utilities/img/Noodle.png" alt="Description of Image"></object> -->
+            <div class="how-it-work">
+                <h1>How It Works</h1>
+                <p>Here is the guide for you to order in our website</p>
+                <div class="order-steps">
+                    <div class="step">
+                        <img src="images/login.png" alt="">
+                        <h2>Login or Sign up</h2>
+                        <p>Log in for quick and easy food delivery, or sign up to get started today!</p>
+                    </div>
+                    <div class="step">
+                        <img src="images/search-food.png" alt="">
+                        <h2>Search food</h2>
+                        <p>Search for your favorite dishes and discover delicious options near you!</p>
+                    </div>
+                    <div class="step">
+                        <img src="images/checkout.png" alt="">
+                        <h2>Checkout</h2>
+                        <p>Proceed to checkout and get your delicious meal on its way!</p>
+                    </div>
+                </div>   
+            </div>
+
+            <div>
+                <div>
+                    <p class="text">Up to -40% 🎊 Order now to get discount!</p>
+                </div>
+                <div class="food-display-advertisement"> 
+                    <img class="food-images" src="images/food-image.png" alt="">
+                    <img class="food-images" src="images/food-image.png" alt="">
+                    <img class="food-images" src="images/food-image.png" alt="">
+                </div>
+
+                <div class="text">
+                    <p>Popular Categories 🤩</p>
+                </div>
+                <div class="popular-dishes">
+                    <div class="image-box">
+                        <img class="popular-dish" src="images/popular1.png" alt="">
+                        <p class="dish-name">Burger & Fast food <br><span class="res-number">21 Restaurants</span></p>
+
+                    </div>
+                    <div class="image-box">
+                        <img class="popular-dish" src="images/popular2.png" alt="">
+                        <p class="dish-name">Salads <br><span class="res-number">21 Restaurants</span></p>
+                    </div>
+                    <div class="image-box">
+                        <img class="popular-dish" src="images/popular3.png" alt="">
+                        <p class="dish-name">Pasta & Casuals <br><span class="res-number">28 Restaurants</span></p>
+                    </div>
+                    <div class="image-box">
+                        <img class="popular-dish" src="images/popular4.png" alt="">
+                        <p class="dish-name">Pizza <br><span class="res-number">10 Restaurants</span></p>
+                    </div>
+                    <div class="image-box">
+                        <img class="popular-dish" src="images/popular5.png" alt="">
+                        <p class="dish-name">Breakfast <br><span class="res-number">25 Restaurants</span></p>
+                    </div>
+                    <div class="image-box">
+                        <img class="popular-dish" src="images/popular6.png" alt="">
+                        <p class="dish-name">Soups <br><span class="res-number">22 Restaurants</span></p>
+                    </div>
+                </div>
 
 
-        <img class="footerImg" src="Utilities/img/FooterImg.png" alt="footerImg">
+                <div class="text">
+                    <p>Popular Restaurants 🤩</p>
+                </div>
+                <div class="popular-restaurants">
+                    <div class="image-box">
+                        <img class="popular-rest" src="images/rest1.png" alt="">
+                        <p class="rest-name">Shaurma 1 </p>
 
+                    </div>
+                    <div class="image-box">
+                        <img class="popular-rest" src="images/rest2.png" alt="">
+                        <p class="rest-name">Burger King</p>
+                    </div>
+                    <div class="image-box">
+                        <img class="popular-rest" src="images/rest3.png" alt="">
+                        <p class="rest-name">Texas</p>
+                    </div>
+                    <div class="image-box">
+                        <img class="popular-rest" src="images/rest4.png" alt="">
+                        <p class="rest-name">KFC</p>
+                    </div>
+                    <div class="image-box">
+                        <img class="popular-rest" src="images/rest5.png" alt="">
+                        <p class="rest-name">Papa Johns</p>
+                    </div>
+                    <div class="image-box">
+                        <img class="popular-rest" src="images/rest6.png" alt="">
+                        <p class="rest-name">MC Donals</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
 
+        </footer>
     </body>
 </html>
+
+
+
+
+
+
+
