@@ -4,7 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="signup.css">
-        <title>Sign Up - PD Food Deli</title>        
+        <title>Sign Up - PD Food Deli</title>     
+        
+        <script>
+            function validateForm() {
+                var fullname = document.forms["registerForm"]["FullName"].value;
+                var username = document.forms["registerForm"]["UserName"].value;
+                var address = document.forms["registerForm"]["Address"].value;
+                var phonenumber = document.forms["registerForm"]["PhoneNumber"].value;
+                var password = document.forms["registerForm"]["Password"].value;
+                
+                if (fullname == "" || username == "" || phonenumber == "" || address == "" || password == "") {
+                    alert("All fields must be filled out!");
+                    return false;
+                }
+                return true;
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -13,13 +29,17 @@
         </header>
         <main>
             <div class="signup-container">
-                <h2>Sign Up</h2>
-                <form action="/signup" method="post">
-                    <input type="text" placeholder="Username" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Password" required>
-                    <button type="submit">Sign Up</button>
+                <p>Please provide your account information</p>
+                <form action="AccountServlet" method="post" name="registerForm" onsubmit="return validateForm()">
+                    <input type="hidden" name="action" value="register">
+                    <label>Full Name: </label> <input type="text" name="FullName">
+                    <label>User Name: </label> <input type="text" name="UserName">
+                    <label>Address: </label> <input type="text" name="Address">
+                    <label>Phone Number: </label> <input type="text" name="PhoneNumber">
+                    <label>Password:</label> <input type="password" name="Password">
+                    <input type="submit" value="Sign up">
                 </form>
+
                 <p>Already have an account? <a href="login.html">Log in</a></p>
             </div>
         </main>

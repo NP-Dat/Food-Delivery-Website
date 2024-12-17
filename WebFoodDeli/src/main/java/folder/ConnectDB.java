@@ -3,46 +3,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package folder;
-
-import java.sql.*;
-
-// This Class handles connection to the Database
-// Each instance get a new connection and have to close at the end of the function
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 public class ConnectDB {
-    public Statement stmt;
-    public PreparedStatement preparedStmt;
-    public Connection conn;
-    String jdbcUrl = "jdbc:mysql://localhost:3306/FoodDelivery?autoReconnect=true&useSSL=false";
-    String dbuser = "root"; // change if different
-    String dbpassword = "Admin123"; // change if different
-    
-    public ConnectDB() throws SQLException {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/fooddelivery";
+        String username = "root";
+        String password = "Addmin123";
+
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver"); // Optional for MySQL 8+ drivers
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("Connection successful!");
+            conn.close();
         } catch (Exception e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
-        conn = DriverManager.getConnection(jdbcUrl,dbuser,dbpassword);
-        stmt = conn.createStatement();
-    }
-
-
-
-    public void closeConnection() throws SQLException {
-        conn.close();
-    }
-
-    public Connection getConn() {
-        return conn;
-    }
-
-    public String getUrl() {
-        return jdbcUrl;
-    }
-
-    public void setUrl(String url) {
-        this.jdbcUrl = jdbcUrl;
     }
 }
 
