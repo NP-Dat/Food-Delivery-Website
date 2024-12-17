@@ -26,7 +26,7 @@ public class AccountServlet extends HttpServlet {
             // Check if the account already exists
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/fooddelivery", "root", "Admin123")) {
+                try (Connection conn = ConnectDB.getConnectDB()) {
                     String checkSql = "SELECT * FROM Users WHERE UserName = ?";
                     try (PreparedStatement checkStmt = conn.prepareStatement(checkSql)) {
                         checkStmt.setString(1, username);
@@ -72,7 +72,7 @@ public class AccountServlet extends HttpServlet {
             // Validate login
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/fooddelivery", "root", "Admin123")) {
+                try (Connection conn = ConnectDB.getConnectDB()) {
                     String sql = "SELECT * FROM Users WHERE UserName = ? AND UserPassword = ?";
                     try (PreparedStatement stmt = conn.prepareStatement(sql)) {
                         stmt.setString(1, username);

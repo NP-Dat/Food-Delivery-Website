@@ -5,21 +5,22 @@
 package folder;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class ConnectDB {
-    public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/fooddelivery";
-        String username = "root";
-        String password = "Addmin123";
+    private static final String url = "jdbc:mysql://localhost:3306/FoodDelivery";
+    private static final String username = "root";
+    private static final String password = "admin";
 
+    public static Connection getConnectDB()throws SQLException{
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // Optional for MySQL 8+ drivers
-            Connection conn = DriverManager.getConnection(url, username, password);
-            System.out.println("Connection successful!");
-            conn.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+           
+           
+        } catch (ClassNotFoundException e) {}
+        return DriverManager.getConnection(url, username, password);
     }
+        
+    
 }
 
