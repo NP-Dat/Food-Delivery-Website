@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class ConnectDB {
     private static final String url = "jdbc:mysql://localhost:3306/FoodDelivery";
     private static final String username = "root";
-    private static final String password = "admin";
+    private static final String password = "Admin123";
 
     public static Connection getConnectDB()throws SQLException{
         try {

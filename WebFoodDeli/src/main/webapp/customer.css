@@ -89,3 +89,7 @@ th {
     padding: 6px 10px;
     cursor: pointer;
 }
+
+.welcome-message {
+    margin-left: 20px;
+}
