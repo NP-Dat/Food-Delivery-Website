@@ -38,7 +38,7 @@ public class AccountServlet extends HttpServlet {
                             session.setAttribute("UserName", rs.getString("UserName"));
                             session.setAttribute("Address", rs.getString("UserAddress"));
                             session.setAttribute("PhoneNumber", rs.getString("UserNumber"));
-                            response.sendRedirect("customer.html");
+                            response.sendRedirect("customer.jsp");
                         } else {
                             // Insert new account into the database
                             String insertSql = "INSERT INTO Users (Fullname, UserName, UserAddress, UserNumber, UserPassword) VALUES (?, ?, ?, ?, ?)";
@@ -56,7 +56,7 @@ public class AccountServlet extends HttpServlet {
                             session.setAttribute("UserName", username);
                             session.setAttribute("Address", address);
                             session.setAttribute("PhoneNumber", phonenumber);
-                            response.sendRedirect("customer.html");
+                            response.sendRedirect("customer.jsp");
                         }
                     }
                 }
@@ -85,7 +85,7 @@ public class AccountServlet extends HttpServlet {
                             session.setAttribute("UserName", rs.getString("UserName"));
                             session.setAttribute("Address", rs.getString("UserAddress"));
                             session.setAttribute("PhoneNumber", rs.getString("UserNumber"));
-                            response.sendRedirect("customer.html");
+                            response.sendRedirect("customer.jsp");
                         } else {
                             // Failed login
                             response.sendRedirect("login.html?error=invalid");
