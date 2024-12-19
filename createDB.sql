@@ -88,8 +88,8 @@ VALUES
 
 INSERT INTO MenuItem (FoodName, Price, RestaurantID, Url)
 VALUES 
-('Cheeseburger', 8, 1, 'noImg'),
-('Veggie Pizza', 10, 2, 'noImg');
+('Cheeseburger', 8, 1, 'images/burger.png'),
+('Veggie Pizza', 10, 2, 'images/fries.png');
 
 INSERT INTO DeliveryPerson (DName, Number, CurrentLocation, PersonStatus)
 VALUES 
